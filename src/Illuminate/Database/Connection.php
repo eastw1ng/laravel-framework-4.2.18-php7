@@ -659,11 +659,11 @@ class Connection implements ConnectionInterface {
 	 * @param  \Illuminate\Database\QueryException
 	 * @return bool
 	 */
-	/*protected function causedByLostConnection(QueryException $e)
+	protected function causedByLostConnection(QueryException $e)
 	{
 		return str_contains($e->getPrevious()->getMessage(), 'server has gone away');
-	}*/
-	protected function causedByLostConnection(QueryException $e)
+	}
+	/*protected function causedByLostConnection(QueryException $e)
 	{
 	        $message = $e->getMessage();
 	
@@ -679,7 +679,7 @@ class Connection implements ConnectionInterface {
 	                'SSL connection has been closed unexpectedly',
 	            ]
 	        );
-	}
+	}*/
 
 	/**
 	 * Disconnect from the underlying PDO connection.
